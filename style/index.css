@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 	max-width: 100%;
 	/* overflow: hidden; */
-	border: 3px red solid;
+	/* border: 3px red solid; */
 }
 body {
 }
@@ -39,14 +39,20 @@ nav {
 .nav-buttons {
 	display: flex;
 	justify-content: flex-end;
-	width: 50vw;
+	width: 100%;
 	align-items: center;
 	padding-right: 1%;
 }
 
-.nav-buttons button {
-	width: 15%;
-	height: 55%;
+.nav-buttons button,
+.nav-buttons a {
+	width: 100%;
+	height: 80%;
+	font-size: 1.1rem;
+}
+
+button:hover {
+	cursor: pointer;
 }
 
 .hero {
@@ -68,11 +74,9 @@ nav {
 .header-img {
 	display: flex;
 	justify-content: center;
-	border: 3px double gray;
-
 	height: 100%;
 	width: 80%;
-	background-image: url(https://picsum.photos/400);
+	background-image: url(https://picsum.photos/1000);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -102,14 +106,16 @@ nav {
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.header-content button {
+.header-content button,
+.header-content a {
 	display: flex;
 	justify-content: center;
 	align-self: center;
 	text-align: center;
-	width: 48%;
-	height: 8%;
+	width: 50%;
+	height: 25%;
 	padding-top: 2.5%;
+	text-decoration: none;
 }
 
 /* main portfoili */
@@ -120,8 +126,8 @@ nav {
 	align-content: space-evenly;
 	height: 90vh;
 	width: 99%;
-	border: 3px solid black;
 	margin: 8% 1% 0 1%;
+	padding-right: 1%;
 	flex-flow: row wrap;
 }
 
@@ -131,6 +137,7 @@ nav {
 	height: 50%;
 	width: 29%;
 	flex-flow: row wrap;
+	font-size: 1.5rem;
 }
 
 .content-img,
@@ -140,3 +147,36 @@ content-img img {
 }
 
 /* footer */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 25vh;
+	background-color: #4f4f4f;
+}
+
+.footer-button {
+	height: 100%;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid red;
+}
+
+.footer-button button,
+.footer-button a {
+	width: 15%;
+	height: 25%;
+	border: 3px solid red;
+	font-size: 1.5rem;
+}
+
+.footer-button button {
+	width: 100%;
+	height: 100%;
+}
